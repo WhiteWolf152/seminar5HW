@@ -6,47 +6,47 @@
 */
 
 
-int [] InitArray(int length) 
+int[] InitArray(int length)
 {
-    int [] arr = new int[length];
+    int[] arr = new int[length];
     Random rnd = new Random();
 
-        for(int i = 0; i < length; i++)
-        {
-            arr[i] = rnd.Next(-99, 100); // [a,b)
-        }
+    for (int i = 0; i < length; i++)
+    {
+        arr[i] = rnd.Next(-99, 100); // [a,b)
+    }
     return arr;
 }
 
-   
+
 int GetSum(int[] array)
 {
     int sum = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        int numberArray = i % 2; 
-        if (numberArray == 0 )
+        int numberArray = i % 2;
+        if (numberArray == 0)
         {
             sum = sum + array[i];
         }
-    } 
+    }
     return sum;
-    
+
 }
 
-void PrintArray(int [] array)
+void PrintArray(int[] array)
 
 {
-    for (int i=0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-     Console.Write(array[i] + " " );
+        Console.Write(array[i] + " ");
     }
 }
 
 Console.WriteLine("Введите размерность массива");
 
 int length = int.Parse(Console.ReadLine());
-int [] arr = InitArray(length);
+int[] arr = InitArray(length);
 
 Console.WriteLine("Массив: ");
 
